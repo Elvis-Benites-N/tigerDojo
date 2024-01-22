@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Swap from "./pages/Swap";
 
-export const App = () => {
+const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/swap" element={<Swap />} />
+      </Routes>
+    </div>
+  );
+};
 
 export default App;
