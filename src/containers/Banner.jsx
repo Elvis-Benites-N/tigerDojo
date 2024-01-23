@@ -52,7 +52,7 @@ const Banner = () => {
       {/* Content */}
       <Container
         sx={{
-          height: { xs: "110vh", sm: "105vh", md: "90vh" },
+          height: "clamp(500px, 105vh, 900px)",
           pt: "max(228px, 10vh)",
           px: 2,
           width: "100%",
@@ -108,6 +108,7 @@ const Banner = () => {
             position: "relative",
             bottom: "14px",
             
+            height: { xs: '50vh', md: '187px' }
           }}
         >
           {Items.map((image, index) => (
@@ -115,7 +116,7 @@ const Banner = () => {
               <Box
                 sx={{
                   width: "auto",
-
+                  
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",

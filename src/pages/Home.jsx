@@ -9,16 +9,16 @@ import WorkDetails from '../containers/WorkDetails'
 
 const Home = () => {
   return (
-    <div>
+    <div style={{ minWidth: '342px' }}>
         {/* Navbar */}
         <Navbar />
        
         {/* Sections */}
         <Banner />
         <About />
-        <Contact />
+        
         <WorkDetails />
-
+        <Contact />
         {/* Footer */}
         <Footer />
     </div>

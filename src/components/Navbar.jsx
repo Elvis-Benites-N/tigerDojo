@@ -45,11 +45,7 @@ const Navbar = () => {
         closeMenu();
       }
     };
-
-    // Agregar listener
     document.addEventListener("mousedown", handleClickOutside);
-
-    // Limpiar listener
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
