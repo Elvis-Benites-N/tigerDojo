@@ -28,6 +28,7 @@ const About = () => {
             top: 0,
             left: 0,
             width: "100%",
+            
             height: "100%",
             backgroundColor: "rgba(0, 0, 0, 0.85)",
             zIndex: 1,
@@ -38,6 +39,7 @@ const About = () => {
           src={WrapperA}
           alt=""
           style={{
+           
             width: "100%",
             height: "100%",
             objectFit: "cover",
@@ -66,7 +68,7 @@ const About = () => {
             sx={{
               maxWidth: "640px",
               width: "100%",
-              fontWeight: "600px",
+              fontWeight: 600,
 
               fontSize: { xs: "18px", sm: "24px", md: "30px", lg: "36px" },
             }}

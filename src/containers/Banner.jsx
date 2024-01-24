@@ -1,7 +1,7 @@
 import { Box, Container, Typography, Stack, Grid } from "@mui/material";
 import React from "react";
 import { banner } from "../utils/content";
-import EditedButtons from "../components/EditedButtons";
+import EditedButtons from "../components/Buttons/EditedButtons";
 
 const { Items, MainBackground, title, subtitle, button } = banner;
 
@@ -41,10 +41,13 @@ const Banner = () => {
           right: 0,
           minWidth: "800px",
           height: { xs: "110vh", sm: "105vh", md: "90vh" },
-       
         }}
       >
-        <img src={MainBackground} alt="" style={{ width: "100%", height:"100%", objectFit: "cover"}} />
+        <img
+          src={MainBackground}
+          alt=""
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
       </Box>
 
       {/* Banner elements */}
@@ -52,7 +55,7 @@ const Banner = () => {
       {/* Content */}
       <Container
         sx={{
-          height: "clamp(500px, 105vh, 900px)",
+          minHeight: "clamp(500px, 105vh, 900px)",
           pt: "max(228px, 10vh)",
           px: 2,
           width: "100%",
@@ -107,16 +110,16 @@ const Banner = () => {
             alignItems: "center",
             position: "relative",
             bottom: "14px",
-            
-            height: { xs: '50vh', md: '187px' }
+
+            height: { xs: "50vh", md: "187px" },
           }}
         >
           {Items.map((image, index) => (
-            <Grid item xs={6} md={2} key={index}>
+            <Grid item xs={12} sm={6} md={3} lg={2} key={index}>
               <Box
                 sx={{
                   width: "auto",
-                  
+
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",

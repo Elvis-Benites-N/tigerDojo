@@ -36,23 +36,23 @@ export const work = {
   title: "What we do",
   subtitle:
     "As your partner, you can be confident that your software development practices are at the forefront of security and innovation",
-  items: {
-    top: {
+  items: [
+    {
       title: "Holistic Approach to Security",
-      PadlockW,
+      image: PadlockW,
       text: "Our approach begins with understanding your business needs and risk profile. We seamlessly integrate security into existing processes and developer workflows to improve overall security posture. Our methodology provides you with thorough risk assessments and strategies which help you identify vulnerabilities and prioritize remediation resulting in optimization of your security investments and reducing potential risks.",
     },
-    middle: {
+    {
       title: "Tailored and Risk-based Solutions",
-      Shield,
+      image: Shield,
       text: "Every organization is unique. We provide application security advisory that’s tailored to your specific profile and guide you every step of the way. This involves conducting thorough security assessments, performing secure code reviews, promoting secure coding practices, implementing secure configurations, and fostering a culture of security awareness among development teams. Our comprehensive approach will allow you to build robust and resilient systems with confidence.",
     },
-    bottom: {
+    {
       title: "Continuous Education and Research",
-      Magnifying,
+      image: Magnifying,
       text: "The field of software security is constantly evolving, with new vulnerabilities, attack techniques, and defense mechanisms emerging regularly. We invest in continuous education by staying up to date with the latest security threats, technologies, and best practices to provide our clients with the most current and effective security recommendations.",
     },
-  },
+  ],
 };
 
 export const contact = {
