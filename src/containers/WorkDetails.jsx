@@ -6,8 +6,8 @@ const { title, subtitle, items } = work;
 
 const circleStyles = {
   display: "flex",
-  width: { xs: "10px", sm: "20px", md: "30px", lg: "40px" },
-  height: { xs: "10px", sm: "20px", md: "30px", lg: "40px" },
+  width: { xs: "30px", sm: "30px", md: "30px", lg: "40px" },
+  height: { xs: "30px", sm: "30px", md: "30px", lg: "40px" },
   justifyContent: "center",
   alignItems: "center",
   borderRadius: "40.112px",
@@ -38,15 +38,19 @@ const WorkDetails = () => {
         }}
       >
         <Stack
-          sx={{ maxWidth: "1085px", width: "100%", margin: "0 auto" }}
-          alignItems="center"
+          sx={{
+            maxWidth: "1085px",
+            width: "100%",
+            margin: "0 auto",
+            alignItems: "center",
+          }}
           gap={{ xs: "16px", sm: "20px", md: "24px" }}
         >
           <Typography
             sx={{
               width: "100%",
               fontWeight: 700,
-              fontSize: { xs: "20px", sm: "25px", md: "30px", lg: "40px" },
+              fontSize: { xs: "25px", sm: "30px", md: "35px", lg: "40px" },
             }}
             lineHeight={"32px"}
             align="center"
@@ -60,7 +64,7 @@ const WorkDetails = () => {
               maxWidth: "443px",
               width: "100%",
               fontWeight: 400,
-              fontSize: { xs: "12px", sm: "13px", md: "14px" },
+              fontSize: { xs: "16px", sm: "17px", md: "18px" },
             }}
             align="center"
           >
@@ -96,12 +100,11 @@ const WorkDetails = () => {
               }}
             >
               {index % 2 === 0 ? (
-                // Contenido 1
                 <Box
                   sx={{
                     display: "flex",
                     flexDirection: "column",
-                    
+
                     width: {
                       xs: "306px",
                       sm: "316px",
@@ -115,18 +118,18 @@ const WorkDetails = () => {
                   }}
                 >
                   <Box
-                    sx={{...circleStyles, alignSelf:{
-                      xs: "flex-start",
-                      sm: "flex-end",
-                      md: "flex-end",
-                      lg: "flex-end",
-                    },
-                    "@media screen and (max-width: 770px)": {
-                      alignSelf: "flex-start",
-                    },
-                  }}
-                    
-
+                    sx={{
+                      ...circleStyles,
+                      alignSelf: {
+                        xs: "flex-start",
+                        sm: "flex-end",
+                        md: "flex-end",
+                        lg: "flex-end",
+                      },
+                      "@media screen and (max-width: 770px)": {
+                        alignSelf: "flex-start",
+                      },
+                    }}
                   >
                     {index + 1}
                   </Box>
@@ -135,9 +138,9 @@ const WorkDetails = () => {
                       width: "100%",
                       fontWeight: 700,
                       fontSize: {
-                        xs: "14px",
-                        sm: "14px",
-                        md: "14px",
+                        xs: "20px",
+                        sm: "20px",
+                        md: "20px",
                         lg: "24px",
                       },
                       textAlign: {
@@ -149,7 +152,6 @@ const WorkDetails = () => {
                       "@media screen and (max-width: 770px)": {
                         textAlign: "start",
                       },
-                      
                     }}
                     lineHeight={"32px"}
                   >
@@ -161,7 +163,7 @@ const WorkDetails = () => {
                     sx={{
                       color: "text.secondary",
                       width: "100%",
-                      fontSize: { xs: "12px", sm: "13px", md: "14px" },
+                      fontSize: { xs: "14px", sm: "15px", md: "16px" },
                       textAlign: {
                         xs: "start",
                         sm: "end",
@@ -177,84 +179,98 @@ const WorkDetails = () => {
                   </Typography>
                 </Box>
               ) : (
-                // Contenido 2
                 <Box
                   sx={{
                     flex: 1,
                     display: "flex",
                     alignItems: "center",
                     position: "relative",
-                    justifyContent: {
-                      xs: "flex-start",
-                      sm: "flex-end",
-                      md: "flex-end",
-                      lg: "flex-end",
-                    },
-                    "@media screen and (max-width: 770px)": {
-                      justifyContent: "flex-start",
-                    },
+                    justifyContent: "center",
                   }}
                 >
                   <Box
-                    style={{
+                    sx={{
                       position: "absolute",
                       width: {
-                        xs: "px",
-                        sm: "176px",
-                        md: "186px",
+                        xs: "min(75vw, 196px)",
+                        sm: "min(50vw, 196px)",
+                        md: "min(30vw, 196px)",
                         lg: "196px",
                       },
-                      height: "calc(196px + (100vw - 1366px) * 0.02)",
+                      height: {
+                        xs: "min(75vw, 196px)",
+                        sm: "min(50vw, 196px)",
+                        md: "min(30vw, 196px)",
+                        lg: "196px",
+                      },
                       borderRadius: "50%",
-
-                      background:
+                      backgroundImage:
                         "radial-gradient(58.91% 74.96% at 42.41% 47.14%, rgba(202, 51, 255, 0.25) 17.19%, rgba(144, 118, 255, 0.25) 53.65%, rgba(41, 9, 175, 0.25) 93.75%)",
                       filter: "blur(90px)",
+                      zIndex: 1,
                     }}
                   ></Box>
 
                   <img
                     src={item.image}
-                    style={{ maxWidth: "100%", width: "auto", height: "auto" }}
+                    style={{
+                      maxWidth: "90%",
+                      maxHeight: "90%",
+                      width: "auto",
+                      height: "auto",
+                      position: "relative",
+                      zIndex: 2,
+                    }}
                   />
                 </Box>
               )}
 
               {index % 2 === 0 ? (
-                // Contenido 2
                 <Box
                   sx={{
                     flex: 1,
                     display: "flex",
                     alignItems: "center",
                     position: "relative",
+                    justifyContent: "center",
                   }}
                 >
                   <Box
-                    style={{
+                    sx={{
                       position: "absolute",
                       width: {
-                        xs: "156px",
-                        sm: "176px",
-                        md: "186px",
+                        xs: "min(75vw, 196px)",
+                        sm: "min(50vw, 196px)",
+                        md: "min(30vw, 196px)",
                         lg: "196px",
                       },
-                      height: "calc(196px + (100vw - 1366px) * 0.02)",
+                      height: {
+                        xs: "min(75vw, 196px)",
+                        sm: "min(50vw, 196px)",
+                        md: "min(30vw, 196px)",
+                        lg: "196px",
+                      },
                       borderRadius: "50%",
-
-                      background:
+                      backgroundImage:
                         "radial-gradient(58.91% 74.96% at 42.41% 47.14%, rgba(202, 51, 255, 0.25) 17.19%, rgba(144, 118, 255, 0.25) 53.65%, rgba(41, 9, 175, 0.25) 93.75%)",
                       filter: "blur(90px)",
+                      zIndex: 1,
                     }}
                   ></Box>
 
                   <img
                     src={item.image}
-                    style={{ maxWidth: "100%", width: "auto", height: "auto" }}
+                    style={{
+                      maxWidth: "90%",
+                      maxHeight: "90%",
+                      width: "auto",
+                      height: "auto",
+                      position: "relative",
+                      zIndex: 2,
+                    }}
                   />
                 </Box>
               ) : (
-                // Contenido 1
                 <Box
                   sx={{
                     display: "flex",
@@ -278,14 +294,14 @@ const WorkDetails = () => {
                       width: "100%",
                       fontWeight: 700,
                       fontSize: {
-                        xs: "14px",
-                        sm: "14px",
-                        md: "14px",
+                        xs: "20px",
+                        sm: "20px",
+                        md: "20px",
                         lg: "24px",
                       },
                     }}
                     lineHeight={"32px"}
-                    align="start"
+                    align="left"
                   >
                     {item.title}
                   </Typography>
@@ -295,16 +311,15 @@ const WorkDetails = () => {
                     sx={{
                       color: "text.secondary",
                       width: "100%",
-                      fontSize: { xs: "12px", sm: "13px", md: "14px" },
+                      fontSize: { xs: "14px", sm: "15px", md: "16px" },
                     }}
-                    align="start"
+                    align="left"
                   >
                     {item.text}
                   </Typography>
                 </Box>
               )}
 
-              {/* Línea vertical */}
               {index < items.length - 1 && (
                 <Box
                   sx={{

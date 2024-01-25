@@ -18,7 +18,7 @@ import useCloseMenu from "../hooks/useCloseMenu";
 
 const { Logo, Buttons } = navbarContent;
 
-const Navbar = () => {
+const Navbar = ({ onAboutClick, onServicesClick }) => {
   const scrollPosition = useScrollPosition();
   const theme = useTheme();
   const isMobile = useMediaQuery("(max-width:900px)");
@@ -55,9 +55,9 @@ const Navbar = () => {
           sx={{
             pl: { xs: "5%", sm: "8%", md: "10%", lg: "120px" },
             pr: { xs: "5%", sm: "8%", md: "10%", lg: "120px" },
+            alignItems: "center",
           }}
           direction="row"
-          alignItems="center"
           justifyContent="flex-end"
           flexWrap="wrap"
         >
@@ -69,10 +69,9 @@ const Navbar = () => {
           {isMobile ? (
             <Stack
               direction="row"
-              alignItems="center"
               justifyContent="flex-end"
               spacing={6}
-              sx={{ flex: 1 }}
+              sx={{ flex: 1, alignItems: "center" }}
               flexWrap="wrap"
             >
               <IconButton onClick={toggleMenu}>
@@ -83,10 +82,10 @@ const Navbar = () => {
                 <Stack
                   ref={menuRef}
                   direction="column"
-                  alignItems="flex-end"
                   spacing={2}
                   sx={{
                     position: "absolute",
+                    alignItems: "flex-end",
                     top: `${NAVBAR_HEIGHT}px`,
                     right: { xs: "5%", sm: "40px" },
                     zIndex: 1,
@@ -94,16 +93,14 @@ const Navbar = () => {
                     backdropFilter: "blur(60px)",
                     padding: "24px",
                     border: "1px solid",
-                    borderColor: "special.border"
+                    borderColor: "special.border",
                   }}
                 >
-                  <LinkButton onClick={closeMenu}>
+                  <LinkButton onClick={onAboutClick}>
                     <Typography variant="body2">{Buttons.item1}</Typography>
                   </LinkButton>
-                  <Divider
-                    sx={{ bgcolor: "special.border", width: "100%" }}
-                  />
-                  <LinkButton onClick={closeMenu}>
+                  <Divider sx={{ bgcolor: "special.border", width: "100%" }} />
+                  <LinkButton onClick={onServicesClick}>
                     <Typography variant="body2">{Buttons.item2}</Typography>
                   </LinkButton>
                 </Stack>
@@ -112,17 +109,16 @@ const Navbar = () => {
           ) : (
             <Stack
               direction="row"
-              alignItems="center"
               justifyContent="flex-end"
               spacing={6}
-              sx={{ flex: 1 }}
+              sx={{ flex: 1, alignItems: "center" }}
               flexWrap="wrap"
             >
-              <LinkButton>
+              <LinkButton onClick={onAboutClick}>
                 <Typography variant="body2">{Buttons.item1}</Typography>
               </LinkButton>
 
-              <LinkButton spacing={0.5}>
+              <LinkButton spacing={0.5} onClick={onServicesClick}>
                 <Typography variant="body2">{Buttons.item2}</Typography>
               </LinkButton>
             </Stack>

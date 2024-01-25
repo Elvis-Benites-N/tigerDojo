@@ -15,6 +15,9 @@ import Magnifying from "../assets/images/work/magnifying.svg";
 import PadlockW from "../assets/images/work/padlock.svg";
 import Shield from "../assets/images/work/shield.svg";
 
+//Contact us
+import WrapperC from "../assets/images/contact/wrapper.png";
+
 export const banner = {
   Items: [SNYK, Atlassian, AWS, GCloud, Azure],
   MainBackground,
@@ -56,17 +59,17 @@ export const work = {
 };
 
 export const contact = {
+  WrapperC,
   title: "Contact us",
-  field1: "Name",
-  field2: "Email",
-  field3: "Message",
+  fields: ["Name", "Email", "Message"],
   button: "Submit",
+  alert: "Your request was sent!",
 };
 
 export const footer = {
   logo: Logo,
   title: "Veteran Owned Business",
-  subtitle: "@2024 Tiger Dojo Technology Group, LLC. All rights reserved.",
+  copyright: "@2024 Tiger Dojo Technology Group, LLC. All rights reserved.",
 };
 
 export const navbarContent = {
@@ -75,4 +78,56 @@ export const navbarContent = {
     item1: "About us",
     item2: "Services",
   },
+};
+
+export const modalInfo = {
+  titleM: "Privacy Policy",
+  date: "Last Updated: 24 January 2024",
+  buttontext: "Close",
+  introduction:
+    "Tiger Dojo Technology Group, LLC ('us', 'we', or 'our') operates the tigerdojo.io website. This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our service and the choices you have associated with that data.",
+  sections: [
+    {
+      id: 1,
+      title: "Information Collection and Use",
+      content:
+        "We collect certain personal information, including names and email addresses, when you solicit our services through the contact form on our website. We use this information solely for the purpose of responding to your inquiry.",
+    },
+    {
+      id: 2,
+      title: "Security",
+      content:
+        "The security of your personal information is important to us. We have implemented measures to safeguard the information we collect and ensure its confidentiality.",
+    },
+    {
+      id: 3,
+      title: "Third-Party Disclosure",
+      content:
+        "We do not share your personal information with third parties. Your data is only accessible to us and is used exclusively for the purpose stated in Section 1.",
+    },
+    {
+      id: 4,
+      title: "Your Rights",
+      content:
+        "You have the right to request information about the personal data we hold about you, and you may also request to correct, update, or delete this information.",
+    },
+    {
+      id: 5,
+      title: "Governing Law",
+      content:
+        "This Privacy Policy is governed by the laws of the United States. By using our service, you agree to the collection and use of information in accordance with this policy.",
+    },
+    {
+      id: 6,
+      title: "Changes to This Privacy Policy",
+      content:
+        "We may update our Privacy Policy from time to time. Any changes will be effective upon posting the revised policy on this page.",
+    },
+    {
+      id: 7,
+      title: "Contact Us",
+      content:
+        "If you have any questions or concerns about this Privacy Policy, please contact us at hello@tigerdojo.io.",
+    },
+  ],
 };

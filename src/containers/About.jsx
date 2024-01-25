@@ -28,7 +28,7 @@ const About = () => {
             top: 0,
             left: 0,
             width: "100%",
-            
+
             height: "100%",
             backgroundColor: "rgba(0, 0, 0, 0.85)",
             zIndex: 1,
@@ -39,7 +39,6 @@ const About = () => {
           src={WrapperA}
           alt=""
           style={{
-           
             width: "100%",
             height: "100%",
             objectFit: "cover",
@@ -60,33 +59,48 @@ const About = () => {
         }}
       >
         <Stack
-          sx={{ maxWidth: "1085px", width: "100%", margin: "0 auto" }}
-          alignItems="center"
+          sx={{
+            maxWidth: "1085px",
+            width: "100%",
+            margin: "0 auto",
+            alignItems: "center",
+          }}
           gap={{ xs: "20px", sm: "30px", md: "40px" }}
         >
-          <Typography
+          <Box
             sx={{
-              maxWidth: "640px",
-              width: "100%",
-              fontWeight: 600,
-
-              fontSize: { xs: "18px", sm: "24px", md: "30px", lg: "36px" },
+              display: "flex",
+              flexDirection: "column", // Alinea los elementos en una columna
+              alignItems: "center", // Centra horizontalmente
+              justifyContent: "center",
+              gap:{ xs: "12px", sm: "14px", md: "16px" }
             }}
-            lineHeight={"48px"}
-            align="center"
           >
-            <Box >  
-              <img src={PadlockA} alt="" />
-            </Box>
-            {title}
-          </Typography>
+            <img
+              src={PadlockA}
+              style={{ display: "block", maxWidth: "100%", height: "auto" }}
+            />
+            <Typography
+              sx={{
+                maxWidth: "640px",
+                width: "100%",
+                fontWeight: 600,
+
+                fontSize: { xs: "18px", sm: "24px", md: "30px", lg: "36px" },
+              }}
+              lineHeight={"48px"}
+              align="center"
+            >
+              {title}
+            </Typography>
+          </Box>
           <Typography
             variant="h5"
             sx={{
               color: "text.secondary",
               maxWidth: "933px",
               width: "100%",
-              fontSize: { xs: "12px", sm: "13px", md: "14px" },
+              fontSize: { xs: "16px", sm: "17px", md: "18px" },
             }}
             align="center"
           >

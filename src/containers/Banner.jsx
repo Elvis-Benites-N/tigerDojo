@@ -2,10 +2,11 @@ import { Box, Container, Typography, Stack, Grid } from "@mui/material";
 import React from "react";
 import { banner } from "../utils/content";
 import EditedButtons from "../components/Buttons/EditedButtons";
+import zIndex from "@mui/material/styles/zIndex";
 
 const { Items, MainBackground, title, subtitle, button } = banner;
 
-const Banner = () => {
+const Banner = ({ onContactClick }) => {
   const coloredTitle = title.replace(
     "Development",
     (match) => `<span class="highlighted">${match}</span>`
@@ -62,12 +63,13 @@ const Banner = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
+          alignItems:"center"
         }}
-        alignItems="center"
+        
       >
         <Stack
-          sx={{ maxWidth: "1085px", width: "100%", margin: "0 auto" }}
-          alignItems="center"
+          sx={{ maxWidth: "1085px", width: "100%", margin: "0 auto", alignItems:"center"}}
+          
           gap={{ xs: "20px", sm: "30px", md: "40px" }}
         >
           <Typography
@@ -99,7 +101,7 @@ const Banner = () => {
             {subtitle}
           </Typography>
 
-          <EditedButtons>{button}</EditedButtons>
+          <EditedButtons onClick={onContactClick} sx={{zIndex:10}}>{button}</EditedButtons>
         </Stack>
 
         <Grid
