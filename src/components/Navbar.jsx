@@ -18,7 +18,7 @@ import useCloseMenu from "../hooks/useCloseMenu";
 
 const { Logo, Buttons } = navbarContent;
 
-const Navbar = ({ onAboutClick, onServicesClick }) => {
+const Navbar = ({ onAboutClick, onServicesClick, onHomeClick }) => {
   const scrollPosition = useScrollPosition();
   const theme = useTheme();
   const isMobile = useMediaQuery("(max-width:900px)");
@@ -62,7 +62,7 @@ const Navbar = ({ onAboutClick, onServicesClick }) => {
           flexWrap="wrap"
         >
           {/* Logo */}
-          <img src={Logo} style={{ height: "100%", objectFit: "contain" }} />
+          <img src={Logo} style={{ height: "100%", objectFit: "contain", cursor:"pointer" }} onClick={onHomeClick}/>
 
           {/* Links */}
 
@@ -115,11 +115,11 @@ const Navbar = ({ onAboutClick, onServicesClick }) => {
               flexWrap="wrap"
             >
               <LinkButton onClick={onAboutClick}>
-                <Typography variant="body2">{Buttons.item1}</Typography>
+                <Typography variant="body2"  fontSize= '18px'>{Buttons.item1}</Typography>
               </LinkButton>
 
               <LinkButton spacing={0.5} onClick={onServicesClick}>
-                <Typography variant="body2">{Buttons.item2}</Typography>
+                <Typography variant="body2"   fontSize= '18px'>{Buttons.item2}</Typography>
               </LinkButton>
             </Stack>
           )}

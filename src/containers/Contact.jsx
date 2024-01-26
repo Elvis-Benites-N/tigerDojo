@@ -28,6 +28,7 @@ const Contact = () => {
     return re.test(String(email).toLowerCase());
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -48,10 +49,11 @@ const Contact = () => {
     if (isValid) {
       console.log(ContactData);
       setShowAlert(true);
+   
       setAlertOpacity(1);
 
       setTimeout(() => {
-        setAlertOpacity(0); // Comenzar a hacer la alerta transparente
+        setAlertOpacity(0); 
       }, 2000);
       setTimeout(() => {
         setShowAlert(false);
@@ -230,7 +232,7 @@ const Contact = () => {
                   opacity: alertOpacity,
                   transition: "opacity 0.5s ease-in-out",
                   zIndex: 10,
-                  bottom: 60,
+                  bottom: 40,
                   display: "inline-flex",
                   padding: "12px 32px",
                   justifyContent: "center",
@@ -238,6 +240,7 @@ const Contact = () => {
                   gap: "2px",
                   background: "rgba(0, 0, 0, 0.90)",
                   marginTop: "20px",
+                  
                 }}
                 icon={
                   <CheckCircleIcon
